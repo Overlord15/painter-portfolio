@@ -46,11 +46,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Rohit Painter</title>
-        <link rel="apple-touch-icon" href="paint.png" />
-        <link rel="icon" href="paint.png" />
-      </Head>
       <style jsx global>{`
         @keyframes spin {
           from {
