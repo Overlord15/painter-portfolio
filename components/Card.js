@@ -4,9 +4,6 @@ import {
   CardBody,
   Center,
   Image,
-  Stack,
-  Heading,
-  Text,
 } from "@chakra-ui/react"; // Assuming you're using Chakra UI
 
 const CustomCard = ({ photoNumber }) => {

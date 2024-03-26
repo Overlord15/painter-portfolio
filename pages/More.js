@@ -17,6 +17,7 @@ import {
 } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import CustomCard from "@/components/Card";
+import Head from "next/head";
 
 export default function More() {
   const [isLargerThan650] = useMediaQuery("(min-width: 650px)");
@@ -48,6 +49,11 @@ export default function More() {
   };
   return (
     <>
+      <Head>
+        <title>Rohit Painter</title>
+        <link rel="apple-touch-icon" href="paint.png" />
+        <link rel="icon" href="paint.png" />
+      </Head>
       <style jsx global>{`
         @keyframes spin {
           from {
@@ -65,7 +71,7 @@ export default function More() {
       `}</style>
       <Container pt="1" maxW="container.sm">
         <Center>
-          <Image src="brush.png" style={styles.img} />
+          <Image src="brush.png" alt="brush" style={styles.img} />
         </Center>
         <Section delay={0.1}>
           <Box
@@ -180,7 +186,7 @@ export default function More() {
             <p>
               <Flex direction="column" alignItems="center">
                 {photoNumbers.map((number) => (
-                  <CustomCard src={number} />
+                  <CustomCard key={number} src={number} />
                 ))}
               </Flex>
             </p>

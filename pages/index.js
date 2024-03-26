@@ -17,6 +17,7 @@ import {
   keyframes,
 } from "@chakra-ui/react";
 import Section from "../components/Section";
+import Head from "next/head";
 
 export default function Home() {
   const [isLargerThan650] = useMediaQuery("(min-width: 650px)");
@@ -45,6 +46,11 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Rohit Painter</title>
+        <link rel="apple-touch-icon" href="paint.png" />
+        <link rel="icon" href="paint.png" />
+      </Head>
       <style jsx global>{`
         @keyframes spin {
           from {
@@ -63,7 +69,7 @@ export default function Home() {
       <Container pt="1" maxW="container.sm">
         <Section delay={0.1}>
           <Center>
-            <Image border="2px white" src="brush.png" style={styles.img} />
+            <Image border="2px white" src="brush.png" alt="brush" style={styles.img} />
           </Center>
           <Box
             fontSize="15px"
@@ -174,8 +180,8 @@ export default function Home() {
                       <Stack mt="6" spacing="3">
                         <Heading size="md">Trident Galaxy</Heading>
                         <Text>
-                          J-311, Trident Galaxy, Ghatikia, Kalinga Nagar,
-                          Bhubaneswar- 751003.
+                          Trident Galaxy, Ghatikia, Kalinga Nagar, Bhubaneswar-
+                          751003. J-311 & G-205 Block
                         </Text>
                       </Stack>
                     </CardBody>
@@ -253,6 +259,34 @@ export default function Home() {
               </p>
             )}
           </div>
+        </Section>
+        <Section delay={0.9}>
+          <Text
+            fontSize={20}
+            t
+            pl="2"
+            mb="10px"
+            style={{
+              fontWeight: "bold",
+              lineHeight: 1,
+              marginBottom: 18,
+              marginTop: 3,
+              textDecoration: "underline",
+              textDecorationColor: "#525252",
+              textDecorationThickness: 4,
+              textUnderlineOffset: 6,
+            }}
+          >
+            Places Worked
+          </Text>
+          <Text pl="2">
+            Bhubaneshwar, Kharagpur, Hydrabad and many more states.
+          </Text>
+          <Center>
+            <Text mt="12" mb="" fontSize="10">
+              Copyright 2024
+            </Text>
+          </Center>
         </Section>
       </Container>
     </>
